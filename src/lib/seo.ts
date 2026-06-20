@@ -3,6 +3,9 @@ import { getPersonalInfo } from "@/lib/content";
 import { getSiteNodes } from "@/lib/site-graph";
 import { getSiteUrl } from "./utils";
 
+const siteName = "ARJUN K S";
+const siteTagline = "Professional Portfolio";
+
 interface SEOProps {
   title?: string;
   description?: string;
@@ -23,7 +26,7 @@ export function generateSEO({
   tags,
 }: SEOProps): Metadata {
   const siteUrl = getSiteUrl();
-  const fullTitle = title ? `${title} | StackByArjun` : "StackByArjun | Senior Full-Stack Engineer";
+  const fullTitle = title ? `${title} | ${siteName}` : `${siteName} | ${siteTagline}`;
   const defaultDescription =
     "Portfolio of a System Administrator and SOC-focused IT professional — networking, cybersecurity, and beginner Python & JavaScript projects.";
   const metaDescription = description || defaultDescription;
@@ -44,7 +47,7 @@ export function generateSEO({
       title: fullTitle,
       description: metaDescription,
       url,
-      siteName: "StackByArjun",
+      siteName: `${siteName} | ${siteTagline}`,
       images: [{ url: ogImage, width: 1200, height: 630, alt: fullTitle }],
       locale: "en_US",
       type,
@@ -68,16 +71,23 @@ export function generateSEO({
         "max-snippet": -1,
       },
     },
+    icons: {
+      icon: "/favicon.png",
+      apple: "/favicon.png",
+    },
   };
 }
 
-export function generatePersonJsonLd(personal: {
-  name: string;
-  title: string;
-  bio: string;
-  email: string;
-  avatar: string;
-}, sameAs: string[] = []) {
+export function generatePersonJsonLd(
+  personal: {
+    name: string;
+    title: string;
+    bio: string;
+    avatar: string;
+  },
+  sameAs: string[] = [],
+  email?: string,
+) {
   const siteUrl = getSiteUrl();
   return {
     "@context": "https://schema.org",
@@ -86,7 +96,7 @@ export function generatePersonJsonLd(personal: {
     name: personal.name,
     jobTitle: personal.title,
     description: personal.bio,
-    email: personal.email,
+    ...(email && { email }),
     image: `${siteUrl}${personal.avatar}`,
     url: siteUrl,
     sameAs,
@@ -122,7 +132,7 @@ export function generateWebsiteJsonLd() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${siteUrl}/#website`,
-    name: "StackByArjun",
+    name: `${siteName} | ${siteTagline}`,
     url: siteUrl,
     potentialAction: {
       "@type": "SearchAction",
@@ -188,10 +198,10 @@ export function generateSiteGraphJsonLd(
     name: string;
     title: string;
     bio: string;
-    email: string;
     avatar: string;
   },
   sameAs: string[] = [],
+  email?: string,
 ) {
   const siteUrl = getSiteUrl();
   const nodes = getSiteNodes();
@@ -202,7 +212,7 @@ export function generateSiteGraphJsonLd(
     name: personal.name,
     jobTitle: personal.title,
     description: personal.bio,
-    email: personal.email,
+    ...(email && { email }),
     image: `${siteUrl}${personal.avatar}`,
     url: siteUrl,
     sameAs,
@@ -211,7 +221,7 @@ export function generateSiteGraphJsonLd(
   const website = {
     "@type": "WebSite",
     "@id": `${siteUrl}/#website`,
-    name: "StackByArjun",
+    name: `${siteName} | ${siteTagline}`,
     url: siteUrl,
     publisher: { "@id": `${siteUrl}/#person` },
     hasPart: nodes.map((node) => ({ "@id": `${siteUrl}${node.path}/#webpage` })),

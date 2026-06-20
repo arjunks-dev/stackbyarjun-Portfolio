@@ -61,6 +61,14 @@ export function getSocialLinks(): SocialLink[] {
   return data.links;
 }
 
+export function getContactEmail(socialLinks: SocialLink[]): string | undefined {
+  const emailLink = socialLinks.find(
+    (link) => link.icon === "email" || link.url.toLowerCase().startsWith("mailto:"),
+  );
+  if (!emailLink) return undefined;
+  return emailLink.url.replace(/^mailto:/i, "");
+}
+
 export function getSkills(): Skill[] {
   const filePath = path.join(contentDir, "skills", "skills.json");
   const raw = fs.readFileSync(filePath, "utf-8");

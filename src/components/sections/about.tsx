@@ -43,15 +43,11 @@ export function AboutSection({ personal }: { personal: PersonalInfo }) {
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn direction="left">
-            <motion.div
-              style={{ y: imageY }}
-              className="gradient-border mx-auto w-fit max-w-md overflow-hidden rounded-2xl bg-background p-1"
-            >
-              {/* Natural aspect ratio; mix-blend helps dark photo backgrounds match the site */}
+            <motion.div style={{ y: imageY }} className="mx-auto w-fit max-w-md">
               <img
                 src={personal.avatar}
                 alt={personal.name}
-                className="block h-auto max-h-[32rem] w-auto max-w-full rounded-xl object-contain mix-blend-lighten"
+                className="block h-auto max-h-[32rem] w-auto max-w-full rounded-2xl object-contain"
               />
             </motion.div>
           </FadeIn>

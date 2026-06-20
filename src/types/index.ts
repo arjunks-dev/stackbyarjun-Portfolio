@@ -6,7 +6,6 @@ export interface PersonalInfo {
   tagline: string;
   bio: string;
   experienceSummary: string;
-  email: string;
   location: string;
   avatar: string;
   resume: string;

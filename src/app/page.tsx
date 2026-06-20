@@ -54,7 +54,7 @@ export default function HomePage() {
       <SectionDivider />
       <BlogSection posts={blogPosts} categories={categories} tags={tags} />
       <SectionDivider />
-      <ContactSection personal={personal} socialLinks={socialLinks} />
+      <ContactSection socialLinks={socialLinks} />
     </main>
   );
 }

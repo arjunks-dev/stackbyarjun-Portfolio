@@ -28,7 +28,7 @@ export function getSiteNodes(): SiteNode[] {
       id: "home",
       path: "/",
       type: "home",
-      title: "StackByArjun | Senior Full-Stack Engineer",
+      title: "ARJUN K S | Professional Portfolio",
       description:
         "Portfolio of a System Administrator and SOC-focused IT professional — networking, cybersecurity, and beginner Python & JavaScript projects.",
       changeFrequency: "weekly",

@@ -8,6 +8,7 @@ import { Header } from "@/components/layout/header";
 import { PageLoader } from "@/components/layout/page-loader";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import {
+  getContactEmail,
   getPersonalInfo,
   getSocialLinks,
 } from "@/lib/content";
@@ -27,13 +28,16 @@ export const metadata = generateSEO({});
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const personal = getPersonalInfo();
   const socialLinks = getSocialLinks();
+  const contactEmail = getContactEmail(socialLinks);
   const personJsonLd = generatePersonJsonLd(
     personal,
     socialLinks.map((l) => l.url),
+    contactEmail,
   );
   const siteGraphJsonLd = generateSiteGraphJsonLd(
     personal,
     socialLinks.map((l) => l.url),
+    contactEmail,
   );
 
   return (

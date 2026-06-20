@@ -32,7 +32,6 @@ collections:
           - { label: Tagline, name: tagline, widget: string }
           - { label: Bio, name: bio, widget: text }
           - { label: Experience Summary, name: experienceSummary, widget: text }
-          - { label: Email, name: email, widget: string }
           - { label: Location, name: location, widget: string }
           - { label: Avatar, name: avatar, widget: image }
           - { label: Resume PDF, name: resume, widget: file }
