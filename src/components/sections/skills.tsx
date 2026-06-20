@@ -52,9 +52,14 @@ export function SkillsSection({ skills }: { skills: Skill[] }) {
           </div>
         </FadeIn>
 
-        <StaggerContainer className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {filtered.map((skill) => (
-            <StaggerItem key={skill.name}>
+        <StaggerContainer key={active} className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+          {filtered.length === 0 ? (
+            <p className="col-span-full py-8 text-center text-sm text-muted">
+              No skills in this category yet.
+            </p>
+          ) : (
+            filtered.map((skill) => (
+              <StaggerItem key={`${active}-${skill.name}`}>
               <Card className="group relative overflow-hidden" glow>
                 <div className="absolute inset-0 bg-gradient-to-br from-accent/5 to-accent-secondary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 <div className="relative">
@@ -77,7 +82,8 @@ export function SkillsSection({ skills }: { skills: Skill[] }) {
                 </div>
               </Card>
             </StaggerItem>
-          ))}
+            ))
+          )}
         </StaggerContainer>
       </div>
     </section>

@@ -5,7 +5,8 @@
 backend:
   name: github
   repo: arjunks-dev/stackbyarjun-Portfolio
-  branch: main
+  # CMS saves go here. Merge cms → main on GitHub when ready to publish (one deploy).
+  branch: cms
   base_url: https://stackbyarjun-cms-oauth.mail-arjunks.workers.dev
   auth_endpoint: auth
 
@@ -82,7 +83,8 @@ collections:
     label: Projects
     folder: content/projects
     create: true
-    slug: "{{slug}}"
+    slug: "{{title}}"
+    identifier_field: title
     extension: md
     format: frontmatter
     fields:
@@ -103,7 +105,8 @@ collections:
     label: Experience
     folder: content/experience
     create: true
-    slug: "{{slug}}"
+    slug: "{{company}}-{{role}}"
+    identifier_field: company
     extension: md
     format: frontmatter
     fields:
@@ -127,7 +130,8 @@ collections:
     label: Certifications
     folder: content/certifications
     create: true
-    slug: "{{slug}}"
+    slug: "{{name}}"
+    identifier_field: name
     extension: md
     format: frontmatter
     fields:
@@ -143,7 +147,8 @@ collections:
     label: Blog Posts
     folder: content/blog
     create: true
-    slug: "{{slug}}"
+    slug: "{{title}}"
+    identifier_field: title
     extension: md
     format: frontmatter
     fields:
