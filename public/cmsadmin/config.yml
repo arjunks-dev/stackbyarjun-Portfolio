@@ -83,11 +83,12 @@ collections:
     label: Projects
     folder: content/projects
     create: true
-    slug: "{{title}}"
-    identifier_field: title
+    slug: "{{slug}}"
+    identifier_field: slug
     extension: md
     format: frontmatter
     fields:
+      - { label: URL Slug, name: slug, widget: string, hint: "Short ASCII name for the link, e.g. firewall-migration" }
       - { label: Title, name: title, widget: string }
       - { label: Description, name: description, widget: text }
       - { label: Cover Image, name: coverImage, widget: image }

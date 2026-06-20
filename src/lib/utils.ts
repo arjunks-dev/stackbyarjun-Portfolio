@@ -15,11 +15,13 @@ export function formatDate(date: string): string {
 
 export function slugify(text: string): string {
   return text
+    .normalize("NFKD")
+    .replace(/[\u2013\u2014\u2212]/g, "-")
     .toLowerCase()
     .replace(/[^\w\s-]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
-    .trim();
+    .replace(/^-|-$/g, "");
 }
 
 export function getSiteUrl(): string {

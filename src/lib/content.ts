@@ -11,9 +11,19 @@ import type {
   Skill,
   SocialLink,
 } from "@/types";
-import { normalizeDate } from "@/lib/utils";
+import { normalizeDate, slugify } from "@/lib/utils";
 
 const contentDir = path.join(process.cwd(), "content");
+
+function fileSlug(filename: string): string {
+  return filename.replace(/\.mdx?$/, "");
+}
+
+function resolveSlug(filename: string, data: Record<string, unknown>): string {
+  const fromFrontmatter = data.slug as string | undefined;
+  if (fromFrontmatter?.trim()) return slugify(fromFrontmatter);
+  return slugify(fileSlug(filename));
+}
 
 function readMarkdownFiles<T>(
   dir: string,
@@ -26,9 +36,9 @@ function readMarkdownFiles<T>(
 
   return files
     .map((file) => {
-      const slug = file.replace(/\.mdx?$/, "");
       const raw = fs.readFileSync(path.join(fullPath, file), "utf-8");
       const { data, content } = matter(raw);
+      const slug = resolveSlug(file, data as Record<string, unknown>);
       return transform(slug, data as Record<string, unknown>, content);
     })
     .sort((a, b) => {
@@ -74,7 +84,8 @@ export function getProjects(): Project[] {
 }
 
 export function getProjectBySlug(slug: string): Project | undefined {
-  return getProjects().find((p) => p.slug === slug);
+  const normalized = slugify(slug);
+  return getProjects().find((p) => p.slug === normalized);
 }
 
 export function getFeaturedProjects(): Project[] {

@@ -1,6 +1,6 @@
 ---
-title: Enterprise Firewall & SD-WAN Transformation Project – FortiGate to Check
-  Point Migration
+slug: enterprise-firewall-sd-wan-migration
+title: Enterprise Firewall & SD-WAN Transformation Project – FortiGate to Check Point Migration
 description: Successfully led the migration of the enterprise network security
   infrastructure from FortiGate firewalls to Check Point Next-Generation
   Firewalls and Cloud SD-WAN across multiple resort properties. The project

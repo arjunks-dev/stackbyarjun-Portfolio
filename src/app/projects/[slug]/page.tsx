@@ -7,6 +7,8 @@ import { getProjectBySlug, getProjects } from "@/lib/content";
 import { generateProjectJsonLd, generateSEO } from "@/lib/seo";
 import { formatDate } from "@/lib/utils";
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return getProjects().map((p) => ({ slug: p.slug }));
 }
