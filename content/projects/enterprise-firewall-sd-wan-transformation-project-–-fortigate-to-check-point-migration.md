@@ -10,6 +10,12 @@ description: Successfully led the migration of the enterprise network security
 coverImage: /images/uploads/sd-wan-security-centralized-management.png
 techStack:
   - Check Point Quantum Security Gateway
+  - Check Point Cloud SD-WAN
+  - Check Point Endpoint Management
+  - MPLS | Static WAN Links
+  - "Dynamic WAN Selection | Rule-Based SD-WAN Routing | "
+  - IPsec VPN | Access Control Policies (ACLs) | Network Security
+  - Enterprise Networking | Hybrid WAN Architecture | WAN Optimization
 featured: true
 date: 2025-07-01T01:00:00.000+05:00
 ---
