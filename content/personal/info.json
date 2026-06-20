@@ -1,10 +1,10 @@
 {
-  "technologiesCount": 18,
+  "technologiesCount": 17,
   "bio": "IT professional focused on system administration, enterprise networking, and Security Operations Center (SOC) workflows. I manage Windows and Linux servers, troubleshoot network issues, analyze security alerts, and document incidents. I'm also learning JavaScript and Python at a beginner level to automate routine tasks and build practical tools for IT operations.",
   "name": "Arjun K S",
   "resume": "/images/uploads/arjunkailassadasivanpillairesume_2025.pdf",
   "tagline": "Managing Enterprise infrastructure | Monitoring threats | Exploring Stacks",
-  "projectsCompleted": 12,
+  "projectsCompleted": 1,
   "location": "Home : Kollam, Kerala | Working : Male, Maldives",
   "yearsOfExperience": 12,
   "title": "System Administrator | Network & Cybersecurity (SOC) | Aspiring Developer",
@@ -16,5 +16,5 @@
     "Security Monitoring"
   ],
   "experienceSummary": "Hands-on experience in server management, network support, SOC alert triage, and foundational scripting with Python and JavaScript.",
-  "email": "hello@stackbyarjun.com"
+  "email": "pingme@stackbyarjun.com"
 }
