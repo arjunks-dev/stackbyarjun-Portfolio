@@ -8,15 +8,15 @@
     },
     {
       "platform": "LinkedIn",
-      "url": "https://linkedin.com/in/stackbyarjun",
+      "url": "https://www.linkedin.com/in/arjunks94",
       "icon": "linkedin",
       "label": "Arjun K S"
     },
     {
       "platform": "Email",
-      "url": "mailto:hello@stackbyarjun.com",
+      "url": "mailto:pingme@stackbyarjun.com",
       "icon": "email",
-      "label": "hello@stackbyarjun.com"
+      "label": "pingme@stackbyarjun.com"
     },
     {
       "platform": "Telegram",
