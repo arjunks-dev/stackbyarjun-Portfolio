@@ -1,5 +1,4 @@
-import { Github, Heart } from "lucide-react";
-import Link from "next/link";
+import { Heart } from "lucide-react";
 import type { SocialLink } from "@/types";
 import { getSocialIcon } from "@/lib/icons";
 
@@ -47,13 +46,6 @@ export function Footer({
           <p className="flex items-center gap-1 text-sm text-muted">
             Built with <Heart className="h-3.5 w-3.5 text-red-500" /> using Next.js
           </p>
-          <Link
-            href="/admin"
-            className="flex items-center gap-1 text-sm text-muted hover:text-foreground"
-          >
-            <Github className="h-4 w-4" />
-            CMS Admin
-          </Link>
         </div>
       </div>
     </footer>

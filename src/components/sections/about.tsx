@@ -2,7 +2,6 @@
 
 import { Download } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 import { useRef } from "react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { useCountUp } from "@/hooks/use-count-up";
@@ -44,16 +43,16 @@ export function AboutSection({ personal }: { personal: PersonalInfo }) {
 
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
           <FadeIn direction="left">
-            <motion.div style={{ y: imageY }} className="gradient-border relative mx-auto aspect-square max-w-md overflow-hidden rounded-2xl">
-              <Image
+            <motion.div
+              style={{ y: imageY }}
+              className="gradient-border mx-auto w-fit max-w-md overflow-hidden rounded-2xl bg-background p-1"
+            >
+              {/* Natural aspect ratio; mix-blend helps dark photo backgrounds match the site */}
+              <img
                 src={personal.avatar}
                 alt={personal.name}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 400px"
-                priority
+                className="block h-auto max-h-[32rem] w-auto max-w-full rounded-xl object-contain mix-blend-lighten"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/60 to-transparent" />
             </motion.div>
           </FadeIn>
 
