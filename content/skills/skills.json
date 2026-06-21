@@ -3,115 +3,115 @@
     {
       "name": "Windows Server",
       "category": "sysadmin",
-      "proficiency": 85,
-      "description": "AD, GPO, patching, user management"
+      "proficiency": 92,
+      "description": "AD, GPO, patching, user management, OU"
     },
     {
       "name": "Linux Administration",
       "category": "sysadmin",
-      "proficiency": 78,
-      "description": "Ubuntu/CentOS, services, shell basics"
+      "proficiency": 75,
+      "description": "Ubuntu/CentOS, services, shell basics, Kali Linux"
     },
     {
       "name": "Active Directory",
       "category": "sysadmin",
-      "proficiency": 82,
+      "proficiency": 85,
       "description": "Users, groups, OU structure"
     },
     {
       "name": "VMware / Hyper-V",
       "category": "sysadmin",
-      "proficiency": 75,
-      "description": "Virtual machine provisioning & snapshots"
+      "proficiency": 80,
+      "description": "VMWare Esxi 8.0.3 | VMWare Vcenter 8 | Windows Hyper-V 2022"
     },
     {
       "name": "Backup & Recovery",
       "category": "sysadmin",
-      "proficiency": 80,
+      "proficiency": 95,
       "description": "Restore drills and retention policies"
     },
     {
       "name": "TCP/IP",
       "category": "networking",
-      "proficiency": 88,
+      "proficiency": 95,
       "description": "Subnetting, routing, troubleshooting"
     },
     {
       "name": "DNS & DHCP",
       "category": "networking",
-      "proficiency": 85,
+      "proficiency": 90,
       "description": "Resolution issues and scope management"
     },
     {
       "name": "Firewalls",
       "category": "networking",
-      "proficiency": 72,
-      "description": "ACL rules, NAT, basic policy review"
+      "proficiency": 85,
+      "description": "ACL rules, NAT, basic policy review, SD WAN"
     },
     {
       "name": "VPN",
       "category": "networking",
-      "proficiency": 70,
+      "proficiency": 90,
       "description": "Remote access and site-to-site basics"
     },
     {
       "name": "Wireshark",
       "category": "networking",
-      "proficiency": 65,
+      "proficiency": 80,
       "description": "Packet capture and traffic analysis"
     },
     {
       "name": "SIEM (Splunk / Sentinel One Datalake)",
       "category": "cybersecurity",
-      "proficiency": 75,
+      "proficiency": 80,
       "description": "Log ingestion and alert correlation"
     },
     {
       "name": "Incident Triage",
       "category": "cybersecurity",
-      "proficiency": 80,
+      "proficiency": 90,
       "description": "SOC L1 alert review and escalation"
     },
     {
       "name": "Threat Detection",
       "category": "cybersecurity",
-      "proficiency": 72,
+      "proficiency": 90,
       "description": "Malware, phishing, and IOC review"
     },
     {
       "name": "Vulnerability Management",
       "category": "cybersecurity",
-      "proficiency": 68,
+      "proficiency": 85,
       "description": "Scan results and remediation tracking"
     },
     {
       "name": "Security Fundamentals",
       "category": "cybersecurity",
-      "proficiency": 78,
+      "proficiency": 90,
       "description": "CIA triad, MITRE ATT&CK awareness"
     },
     {
       "name": "Python Automation / Web Backend Developer",
       "category": "development",
-      "proficiency": 55,
+      "proficiency": 65,
       "description": "Scripts for logs, files, and automation , Web Server Backend using FastAPI"
     },
     {
       "name": "JavaScript Front End Developer",
       "category": "development",
-      "proficiency": 50,
+      "proficiency": 70,
       "description": "Static Websites and Entry Level Web apps"
     },
     {
       "name": "Git & GitHub",
       "category": "development",
-      "proficiency": 60,
+      "proficiency": 75,
       "description": "Version control for labs and projects"
     },
     {
-      "name": "Bash / PowerShell",
+      "name": "PowerShell",
       "category": "development",
-      "proficiency": 70,
+      "proficiency": 80,
       "description": "Admin automation and task scheduling"
     }
   ]

@@ -1,9 +1,9 @@
 ---
-name: Getting Started in Cybersecurity 1.0
+name: "Fortinet Network Security Expert Level 2: Certified Associate"
 issuer: Fortinet
 date: 2023-07-27T12:00:00.000+05:00
-credentialId: 81c883ad-0a47-4ea4-afe6-24ebe29dd157
-verificationUrl: https://www.credly.com/earner/earned/badge/81c883ad-0a47-4ea4-afe6-24ebe29dd157
+credentialId: 3uOTrY4zJH
+verificationUrl: https://training.fortinet.com/mod/customcert/verify_certificate.php?contextid=251440&code=3uOTrY4zJH&qrcode=1
 image: /images/uploads/nse1.png
 description: The Getting Started in Cybersecurity 1.0 badge recognizes a basic
   understanding of cybersecurity. The badge earner has demonstrated knowledge of
