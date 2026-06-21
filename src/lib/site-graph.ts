@@ -1,7 +1,7 @@
-import { getBlogPosts, getProjects } from "@/lib/content";
+import { getProjects } from "@/lib/content";
 import { getSiteUrl } from "@/lib/utils";
 
-export type SiteNodeType = "home" | "resume" | "project" | "article";
+export type SiteNodeType = "home" | "resume" | "project";
 
 export interface SiteNode {
   id: string;
@@ -21,7 +21,6 @@ function absUrl(path: string): string {
 
 export function getSiteNodes(): SiteNode[] {
   const projects = getProjects();
-  const posts = getBlogPosts();
 
   return [
     {
@@ -53,17 +52,6 @@ export function getSiteNodes(): SiteNode[] {
       date: project.date,
       changeFrequency: "monthly" as const,
       priority: 0.7,
-    })),
-    ...posts.map((post) => ({
-      id: `article-${post.slug}`,
-      path: `/blog/${post.slug}`,
-      type: "article" as const,
-      title: post.title,
-      description: post.description,
-      image: post.coverImage,
-      date: post.date,
-      changeFrequency: "weekly" as const,
-      priority: 0.6,
     })),
   ];
 }

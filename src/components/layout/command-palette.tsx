@@ -18,7 +18,6 @@ const commands = [
   { id: "home", label: "Go to Home", icon: Home, action: "/" },
   { id: "about", label: "About Section", icon: User, action: "/#about" },
   { id: "projects", label: "Projects Section", icon: FolderOpen, action: "/#projects" },
-  { id: "blog", label: "Blog Section", icon: FileText, action: "/#blog" },
   { id: "contact", label: "Contact Section", icon: Mail, action: "/#contact" },
   { id: "settings", label: "Theme Settings", icon: Settings, action: "settings" },
   { id: "resume", label: "View Resume", icon: FileText, action: "/resume" },

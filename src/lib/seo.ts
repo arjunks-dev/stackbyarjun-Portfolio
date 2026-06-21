@@ -103,29 +103,6 @@ export function generatePersonJsonLd(
   };
 }
 
-export function generateArticleJsonLd(post: {
-  title: string;
-  description: string;
-  date: string;
-  coverImage?: string;
-  slug: string;
-}) {
-  const siteUrl = getSiteUrl();
-  return {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: post.title,
-    description: post.description,
-    datePublished: post.date,
-    image: post.coverImage ? `${siteUrl}${post.coverImage}` : undefined,
-    url: `${siteUrl}/blog/${post.slug}`,
-    author: {
-      "@type": "Person",
-      name: "Arjun",
-    },
-  };
-}
-
 export function generateWebsiteJsonLd() {
   const siteUrl = getSiteUrl();
   return {
@@ -134,11 +111,6 @@ export function generateWebsiteJsonLd() {
     "@id": `${siteUrl}/#website`,
     name: `${siteName} | ${siteTagline}`,
     url: siteUrl,
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteUrl}/blog?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -177,7 +149,7 @@ export function generateWebPageJsonLd(node: {
   path: string;
   title: string;
   description: string;
-  type: "home" | "resume" | "project" | "article";
+  type: "home" | "resume" | "project";
 }) {
   const siteUrl = getSiteUrl();
 

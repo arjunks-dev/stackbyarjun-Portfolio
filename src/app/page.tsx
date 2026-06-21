@@ -1,6 +1,5 @@
 import { SectionDivider } from "@/components/animations/section-divider";
 import { AboutSection } from "@/components/sections/about";
-import { BlogSection } from "@/components/sections/blog";
 import { CertificationsSection } from "@/components/sections/certifications";
 import { ContactSection } from "@/components/sections/contact";
 import { ExperienceSection } from "@/components/sections/experience";
@@ -11,9 +10,6 @@ import { ProjectsSection } from "@/components/sections/projects";
 import { SkillsSection } from "@/components/sections/skills";
 import {
   getAllProjectTechnologies,
-  getBlogCategories,
-  getBlogPosts,
-  getBlogTags,
   getCertifications,
   getExperience,
   getFeaturedProjects,
@@ -31,9 +27,6 @@ export default function HomePage() {
   const skills = getSkills();
   const experience = getExperience();
   const certifications = getCertifications();
-  const blogPosts = getBlogPosts();
-  const categories = getBlogCategories();
-  const tags = getBlogTags();
   const socialLinks = getSocialLinks();
 
   return (
@@ -51,8 +44,6 @@ export default function HomePage() {
       <SectionDivider />
       <CertificationsSection certifications={certifications} />
       <GitHubContributions />
-      <SectionDivider />
-      <BlogSection posts={blogPosts} categories={categories} tags={tags} />
       <SectionDivider />
       <ContactSection socialLinks={socialLinks} />
     </main>

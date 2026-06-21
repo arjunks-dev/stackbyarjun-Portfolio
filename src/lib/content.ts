@@ -1,9 +1,7 @@
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import readingTime from "reading-time";
 import type {
-  BlogPost,
   Certification,
   Experience,
   PersonalInfo,
@@ -126,38 +124,6 @@ export function getCertifications(): Certification[] {
     image: data.image as string | undefined,
     description: data.description as string | undefined,
   }));
-}
-
-export function getBlogPosts(includeDrafts = false): BlogPost[] {
-  const posts = readMarkdownFiles<BlogPost>("blog", (slug, data, content) => ({
-    slug,
-    title: (data.title as string) || "",
-    description: (data.description as string) || "",
-    coverImage: data.coverImage as string | undefined,
-    date: normalizeDate(data.date),
-    tags: (data.tags as string[]) || [],
-    category: (data.category as string) || "General",
-    draft: Boolean(data.draft),
-    featured: Boolean(data.featured),
-    body: content,
-    readingTime: readingTime(content).text,
-  }));
-
-  return includeDrafts ? posts : posts.filter((p) => !p.draft);
-}
-
-export function getBlogPostBySlug(slug: string): BlogPost | undefined {
-  return getBlogPosts(true).find((p) => p.slug === slug);
-}
-
-export function getBlogCategories(): string[] {
-  const posts = getBlogPosts();
-  return [...new Set(posts.map((p) => p.category))].sort();
-}
-
-export function getBlogTags(): string[] {
-  const posts = getBlogPosts();
-  return [...new Set(posts.flatMap((p) => p.tags))].sort();
 }
 
 export function getAllProjectTechnologies(): string[] {

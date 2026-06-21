@@ -67,20 +67,6 @@ export interface Certification {
   description?: string;
 }
 
-export interface BlogPost {
-  slug: string;
-  title: string;
-  description: string;
-  coverImage?: string;
-  date: string;
-  tags: string[];
-  category: string;
-  draft: boolean;
-  featured: boolean;
-  body: string;
-  readingTime: string;
-}
-
 export interface SiteSettings {
   personal: PersonalInfo;
   socialLinks: SocialLink[];
